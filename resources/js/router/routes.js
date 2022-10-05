@@ -9,6 +9,16 @@ export default [
         component: loadPageComponent('Discover.vue')
     },
     {
+        path: '/login',
+        name: 'login',
+        component: loadPageComponent('Auth/Login.vue')
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: loadPageComponent('Auth/Register.vue')
+    },
+    {
         path: '*',
         component: loadPageComponent('errors/404.vue')
     }

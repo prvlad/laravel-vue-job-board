@@ -28,14 +28,14 @@
 
                     <div class="relative ml-3">
                         <div>
-                            <button
-                                type="button"
+                            <router-link
+                                :to="{name: 'login'}"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
                                 class="bg-violet-500 inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-violet-700 hover:shadow-lg focus:bg-violet-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out"
                             >
                                 Get started
-                            </button>
+                            </router-link>
                         </div>
 
                         <div class="absolute hidden right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">

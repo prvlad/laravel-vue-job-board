@@ -1,6 +1,8 @@
 import Vue from "vue";
-import store from '~/store'
-import router from '~/router'
+import store from '~/store';
+import router from '~/router';
+
+import '~/plugins';
 
 require('./bootstrap');
 
@@ -11,7 +13,7 @@ Vue.config.productionTip = false
 // Components
 import navbar from "./components/NavBar";
 
-new Vue({
+const app = new Vue({
     el: '#app',
     router,
     store,
@@ -19,5 +21,7 @@ new Vue({
         navbar
     },
 });
+
+window.app = app;
 
 

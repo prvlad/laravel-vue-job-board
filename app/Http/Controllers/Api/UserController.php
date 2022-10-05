@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Service\UserService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -22,7 +23,10 @@ class UserController extends Controller
         $this->userService = $userService;
     }
 
-    public function currentUserInfo()
+    /**
+     * @return JsonResponse
+     */
+    public function currentUserInfo(): JsonResponse
     {
         $currentUser = $this->userService->currentUserInfo();
         return response()->json($currentUser);
